@@ -1,0 +1,92 @@
+@keyframes icons{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.2);
+    }
+}
+
+@keyframes rojo{
+    0%{
+        transform: translateY(-30%);
+    }
+    20%{
+        transform: translateY(10%);
+    }
+    40%{
+        transform: translateX(-20%);
+    }
+    60%{
+        transform: translateX(30%);
+    }
+    80%{
+        transform: translateY(-20%);
+    }
+    100%{
+        transform: translateY(10%);
+    }
+}
+
+@keyframes amarillo{
+    0%{
+        transform: translateX(-10%);
+    }
+    20%{
+        transform: translateX(30%);
+    }
+    40%{
+        transform: translateY(10%);
+    }
+    60%{
+        transform: translateY(-20%);
+    }
+    80%{
+        transform: translateX(30%);
+    }
+    100%{
+        transform: translateX(-10%);
+    }
+}
+
+@keyframes verde{
+    0%{
+        transform: translateY(30%);
+    }
+    20%{
+        transform: translateY(-10%);
+    }
+    40%{
+        transform: translateX(-30%);
+    }
+    60%{
+        transform: translateX(10%);
+    }
+    80%{
+        transform: translateY(30%);
+    }
+    100%{
+        transform: translateY(-10%);
+    }
+}
+
+@keyframes morado{
+    0%{
+        transform: translateX(10%);
+    }
+    20%{
+        transform: translateX(-30%);
+    }
+    40%{
+        transform: translateY(10%);
+    }
+    60%{
+        transform: translateY(-30%);
+    }
+    80%{
+        transform: translateX(-30%);
+    }
+    100%{
+        transform: translateX(10%);
+    }
+}
