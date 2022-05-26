@@ -296,22 +296,23 @@ body {
   justify-items: center;
   align-items: center;
 }
-.main__vertical {
+
+.index .main__vertical {
   position: fixed;
   right: 2%;
   top: 50%;
   z-index: 2;
 }
-.main__iconos {
+.index .main__iconos {
   margin-bottom: 2rem;
 }
-.main__iconos:hover {
+.index .main__iconos:hover {
   animation: icons 0.5s ease 1 forwards;
 }
-.main__svg {
+.index .main__svg {
   max-width: 2rem;
 }
-.main__raton {
+.index .main__raton {
   width: 2rem;
   height: 4rem;
   border-radius: 50px;
@@ -323,7 +324,7 @@ body {
   position: absolute;
   bottom: 20%;
 }
-.main__circulo {
+.index .main__circulo {
   max-width: 0.7rem;
   height: 1rem;
   margin: auto;
@@ -331,57 +332,56 @@ body {
   transform-origin: top;
   fill: #282828;
 }
-.main__trabajo {
+.index .main__trabajo {
   width: 70%;
   margin: auto;
   z-index: 3;
   position: relative;
 }
-.main__h3 {
+.index .main__h3 {
   color: #282828;
   font-family: var(--font-titulos);
   font-size: 5em;
   margin-bottom: 6rem;
 }
-.main__categorias {
+.index .main__categorias {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   margin-bottom: 10rem;
 }
-.main__li {
+.index .main__li {
   margin: 0 0 0 5rem;
   transform-origin: bottom;
 }
-.main__li:hover .main__a {
+.index .main__li:hover .main__a {
   transform: translateY(-30%);
 }
-.main__li.rojo:hover .main__a {
+.index .main__li.rojo:hover .main__a {
   background-color: #FC9696;
   border-color: transparent;
 }
-.main__li.verde:hover .main__a {
+.index .main__li.verde:hover .main__a {
   background-color: #96FCB3;
   border-color: transparent;
 }
-.main__li.morado:hover .main__a {
+.index .main__li.morado:hover .main__a {
   background-color: #B398FF;
   border-color: transparent;
 }
-.main__li.amarillo:hover .main__a {
+.index .main__li.amarillo:hover .main__a {
   background-color: #FAFC96;
   border-color: transparent;
 }
-.main__a {
+.index .main__a {
   transform: translateY(0%);
   transition: all 0.5s ease;
   border-radius: 50px;
   padding: 0.5rem 1rem;
   border: 1px solid #cbcbcb;
 }
-
-.wrapper {
+.index .wrapper {
   text-align: center;
   display: flex;
   flex-flow: row nowrap;
@@ -392,18 +392,114 @@ body {
   font-weight: 700;
   font-size: 5em;
 }
-
-#fixed {
+.index #fixed {
   margin-right: 1rem;
 }
-
-#content {
+.index #content {
   color: lightcoral;
   background: -webkit-linear-gradient(-10deg, #FF7A00, #FF07D7);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-.hidden {
+.index .hidden {
   display: none;
+}
+
+.contacto .main__h2 {
+  color: #282828;
+  font-family: var(--font-titulos);
+  font-weight: 700;
+  font-size: 5em;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+.contacto .main__texto {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.contacto .main__p {
+  margin-bottom: 4rem;
+  font-size: 1.2em;
+}
+.contacto .main__rrss {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 6rem;
+}
+.contacto .main__a {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 0 2rem 7rem;
+}
+.contacto .main__a:hover {
+  animation: icons 0.5s ease 1 forwards;
+}
+.contacto .main__svg {
+  max-width: 2rem;
+}
+.contacto .main__nombre {
+  margin-left: 1rem;
+}
+.contacto .main span {
+  background: -webkit-linear-gradient(-10deg, #FF7A00, #FF07D7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+.sobre-mi .main__vertical {
+  position: fixed;
+  right: 2%;
+  top: 50%;
+  z-index: 2;
+}
+.sobre-mi .main__iconos {
+  margin-bottom: 2rem;
+}
+.sobre-mi .main__iconos:hover {
+  animation: icons 0.5s ease 1 forwards;
+}
+.sobre-mi .main__svg {
+  max-width: 2rem;
+}
+.sobre-mi .main__h2 {
+  color: #282828;
+  font-family: var(--font-titulos);
+  font-weight: 700;
+  font-size: 5em;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+.sobre-mi .main__texto {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 50%;
+  margin: auto;
+}
+.sobre-mi .main__columna {
+  width: 45%;
+}
+.sobre-mi .main__columna.izquierda {
+  margin-right: 1rem;
+}
+.sobre-mi .main__columna.derecha {
+  margin-left: 1rem;
+}
+.sobre-mi .main__parrafo {
+  margin-bottom: 2rem;
+  line-height: 25px;
+}
+.sobre-mi .main span {
+  background: -webkit-linear-gradient(-10deg, #FF7A00, #FF07D7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
 }

@@ -1,0 +1,63 @@
+.contacto{
+    .main{
+  
+
+
+        &__h2{
+            color: #282828;
+            font-family: var(--font-titulos);
+            font-weight: 700;
+            font-size: 5em;
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+    
+        &__texto{
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        &__p{
+            margin-bottom: 4rem;
+            font-size: 1.2em;
+        }
+    
+        &__rrss{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 6rem;
+        }
+    
+        &__a{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 0 0 2rem 7rem;
+        }
+    
+        &__a:hover{
+            animation: icons 0.5s ease 1 forwards;
+        }
+    
+        &__svg{
+            max-width: 2rem;
+        }
+    
+        &__nombre{
+            margin-left: 1rem;
+        }
+    
+        span{
+        background: -webkit-linear-gradient(-10deg, #FF7A00, #FF07D7);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 700;
+        }
+    }
+    
+}
