@@ -1,12 +1,30 @@
 $(document).ready(function(){
-    let content = "Carles";
-let contentNew = ["Marta Ortolá", "front-end developer", "diseñadora gráfica"];
-let contentArray = [];
-printLetter(contentNew, contentArray, 0);
-setInterval(function() {
-        $("#parpadeo").fadeToggle();
-}, 400);
+  let content = "Carles";
+  let contentNew = ["Marta Ortolá", "front-end developer", "diseñadora gráfica"];
+  let contentArray = [];
+  printLetter(contentNew, contentArray, 0);
+  setInterval(function() {
+          $("#parpadeo").fadeToggle();
+  }, 400);
+
+  let indice = $('.li.rojo').index($(this))
+  $('.main__a.rojo').eq(indice).addClass('activado')
 });
+
+$(window).scroll(function(){
+
+  let pixel = $(window).scrollTop()
+  let lastPixelBox = $('.header').height()
+
+  if( pixel >= lastPixelBox ){
+      $('.header').addClass('activado')
+  }
+  else{
+    $('.header').removeClass('activado')
+  }
+  
+}) 
+
 function printLetter(content, contentArray, index){
 let printLetter = setInterval(function() {
    if(contentArray.length === 0){
@@ -52,6 +70,16 @@ let deleteLetters = setInterval(function() {
 
 
 
-
-
- 
+$('.main__li').click(function(){
+  let lastClass = $($(this)).attr('class').split(' ').pop();
+  let indice = $($(this)).index($(this))
+  $('.main__a').removeClass('activado')
+  $(`.main__a.${lastClass}`).eq(indice).addClass('activado')
+  $('.main__img').addClass('activado')
+  if(lastClass != 'rojo'){
+    $(`.main__img.${lastClass}`).removeClass('activado')
+  }
+  else{
+    $('.main__img').removeClass('activado')
+  }
+})
