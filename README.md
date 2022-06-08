@@ -1,6 +1,6 @@
 # Portfolio 2022
 
-¡Hola! Soy Marta Ortolá, Front-End Developer en Madrid.
+Hola! Soy Marta Ortolá, Front-End Developer en Madrid.
 
 He estudiado un grado superior de Marketing y Publicidad y un máster de Diseño Gráfico y Desarrollo Web Front-End. Aquello me llevó a darme cuenta de que mi verdadera pasión es el diseño y el desarrollo!
 
