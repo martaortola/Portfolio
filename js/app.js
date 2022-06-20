@@ -73,13 +73,13 @@ let deleteLetters = setInterval(function() {
 $('.main__li').click(function(){
   let lastClass = $($(this)).attr('class').split(' ').pop();
   let indice = $($(this)).index($(this))
-  $('.main__a').removeClass('activado')
-  $(`.main__a.${lastClass}`).eq(indice).addClass('activado')
-  $('.main__img').addClass('activado')
+  $('.main__li').removeClass('activado')
+  $(`.main__li.${lastClass}`).eq(indice).addClass('activado')
+  $('.main__item').addClass('activado')
   if(lastClass != 'rojo'){
-    $(`.main__img.${lastClass}`).removeClass('activado')
+    $(`.main__item.${lastClass}`).removeClass('activado')
   }
   else{
-    $('.main__img').removeClass('activado')
+    $('.main__item').removeClass('activado')
   }
 })

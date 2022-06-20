@@ -14,7 +14,9 @@
         justify-content: space-between;
         align-items: center;
         margin: 1rem auto;
-        color: #282828;
+        color: var(--color-texto);
+        border-bottom: 0.5px solid var(--color-texto);
+        padding-bottom: 1rem;
         @media screen and (max-width:1300px){
             width: 80%;
         }
@@ -65,91 +67,35 @@
     &__li{
         // background-color: lightyellow;
         margin: 0 0 0 5rem;
-        border-radius: 50px;
         padding: 0.5rem 1rem;
-        border: 1px solid rgb(203, 203, 203);
-        transition: all .4s ease;
+        font-weight: 400;
+        &::after{
+            content: '';
+            display: flex;
+            width: 100%;
+            height: 1.5px;
+            background: -webkit-linear-gradient(-10deg, #FF7A00, #FF07D7);
+            margin-top: 0.2rem;
+            border-radius: 50px;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s ease-in-out;
+        }
+        &:hover::after{
+            transform: scaleX(1);
+        }
         @media screen and (max-width:890px){
             font-size: 0.9em;
         }
     }
-
-    &__li:hover , &__li.activo{
-        color: white;
-        border-color: transparent;
-        background: -webkit-linear-gradient(-10deg, #FF7A00, #FF07D7);
-    }
+    
 }
 
 .main{
     width: 100%;
-    // background-color: lightyellow;
+    background-color: var(--color-fondo);
     position: relative;
-    background-image: url(../assets/ruido.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
     overflow: hidden;
-
-    &__fondo{
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        z-index: 1;
-        @media screen and (max-width:430px){
-            top: 0;
-        }
-        @media screen and (max-width:400px){
-            top: 0;
-        }
-    }
-    
-    &__fila{
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        align-items: center;
-        @media screen and (max-width:430px){
-            margin-bottom: 10rem;
-        }
-        @media screen and (max-width:400px){
-            margin-bottom: 10rem;
-        }
-    }
-    
-    &__blob{
-        max-width: 30%;
-        // background-color: lightcyan;
-        mix-blend-mode: difference;
-        @media screen and (max-width:430px){
-            max-width: 70%;
-        }
-    }
-
-    &__blob.rojo{
-        // margin-left: 2rem;
-        fill: #FC9696;
-        animation: rojo 80s ease infinite 0s both;
-    }
-
-    &__blob.amarillo{
-        // margin-left: 2rem;
-        fill: #FAFC96;
-        animation: amarillo 80s ease infinite 0s both;
-    }
-
-    &__blob.verde{
-        // margin-right: 2rem;
-        fill: #96FCB3;
-        animation: verde 80s ease infinite 0s both;
-    }
-
-    &__blob.morado{
-        // margin: 2rem 2rem 0 0;
-        fill: #B398FF;
-        animation: morado 80s ease infinite 0s both;
-    }
 
     &__principal{
         width: 70%;
@@ -172,6 +118,6 @@
 }
 
 .header.activado{
-    background-color: white;
+    // background-color: white;
     position: fixed;
 }

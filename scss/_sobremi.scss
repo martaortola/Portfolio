@@ -14,6 +14,7 @@
     
         &__iconos{
             margin-bottom: 2rem;
+            color: var(--color-texto);
             animation: fadeOut 0.4s ease 1 both;
             @media screen and (max-width:400px){
                 margin-bottom: 1.3rem;
@@ -25,14 +26,14 @@
         }
     
         &__svg{
-            max-width: 2rem;
+            max-width: 1.8rem;
             @media screen and (max-width:400px){
                 max-width: 1.5rem;
             }
         }
     
         &__h2{
-            color: #282828;
+            color: var(--color-texto);
             font-family: var(--font-titulos);
             font-weight: 700;
             font-size: 5em;
@@ -47,6 +48,7 @@
             align-items:flex-start;
             width: 70%;
             margin: auto;
+            color: var(--color-texto);
         }
     
         &__columna{
@@ -72,7 +74,7 @@
 
         &__destacado{
             font-weight: 700;
-            color: #282828;
+            color: -webkit-linear-gradient(-10deg, #FF7A00, #FF07D7);
         }
     
         span.email{
@@ -84,7 +86,7 @@
 
         &__img{
             margin-bottom: 2rem;
-            max-width: 20rem;
+            max-width: 15rem;
         }
     }
     

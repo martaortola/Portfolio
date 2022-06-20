@@ -6,8 +6,14 @@
             right: 2%;
             top: 50%;
             z-index: 2;
+            color: var(--color-texto);
             @media screen and (max-width:430px){
-                right: 5%;
+                left: 5%;
+                top: 12%;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: flex-start;
+                align-items: center;
             }
         }
     
@@ -16,6 +22,7 @@
             animation: fadeOut 0.4s ease 1 both;
             @media screen and (max-width:430px){
                 margin-bottom: 1.3rem;
+                margin-left: 1rem;
             }
         }
     
@@ -24,9 +31,9 @@
         }
     
         &__svg{
-            max-width: 2rem;
+            max-width: 1.8rem;
             @media screen and (max-width:430px){
-                max-width: 1.5rem;
+                max-width: 1.4rem;
             }
         }
     
@@ -39,7 +46,7 @@
             flex-flow: row nowrap;
             justify-content: center;
             align-items: center;
-            border: 1px solid #282828;
+            border: 1px solid var(--color-texto);
             position: absolute;
             bottom: 20%;
             @media screen and (max-width:430px){
@@ -53,7 +60,7 @@
             margin: auto;
             animation: move 1.5s ease infinite 0s both;
             transform-origin: top;
-            fill: #282828;
+            fill: var(--color-texto);
         }
     
         &__trabajo{
@@ -67,15 +74,17 @@
         }
     
         &__h3{
-            color: #282828;
+            color: var(--color-texto);
             font-family: var(--font-titulos);
             // font-weight: 700;
             font-size: 5em;
             margin-bottom: 6rem;
+            padding-top: 7rem;
             @media screen and (max-width:430px){
                 font-size: 3em;
                 margin-bottom: 3rem;
                 text-align: center;
+                padding-top: 4rem;
             }
         }
     
@@ -92,71 +101,52 @@
     
         &__li{
             margin: 0 0 0 5rem;
-            // transition: all .2s ease;
             transform-origin: bottom;
-            border-radius: 50px;
+            color: var(--color-texto);
+            &::after{
+                content: '';
+                display: flex;
+                width: 100%;
+                height: 1.5px;
+                background: -webkit-linear-gradient(-10deg, #FF7A00, #FF07D7);
+                margin-top: 0.2rem;
+                border-radius: 50px;
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform 0.5s ease-in-out;
+            }
+            &:hover::after{
+                transform: scaleX(1);
+            }
             @media screen and (max-width:430px){
                 font-size: 1em;
                 margin: 0 0 1rem 1rem;
             }
         }
-       
-        &__li:hover .main__a:not( .activado ){
-            transform: scale(1.1);
-        }
     
-        &__li.rojo:hover .main__a{
-            background-color: #FC9696;
-            border-color: transparent;
-        }
 
-        &__a.rojo.activado{
-            background-color: #FC9696;
-            border-color: transparent;
-        }
-    
-        &__li.verde:hover .main__a{
-            background-color: #96FCB3;
-            border-color: transparent;
-        }
-
-        &__a.verde.activado{
-            background-color: #96FCB3;
-            border-color: transparent;
-        }
-    
-        &__li.morado:hover .main__a{
-            background-color: #B398FF;
-            border-color: transparent;
-        }
-
-        &__a.morado.activado{
-            background-color: #B398FF;
-            border-color: transparent;
-        }
-    
-        &__li.amarillo:hover .main__a{
-            background-color: #FAFC96;
-            border-color: transparent;
-        }
-
-        &__a.amarillo.activado{
-            background-color: #FAFC96;
-            border-color: transparent;
+        &__li.activado{
+            &::after{
+                content: '';
+                display: flex;
+                width: 100%;
+                height: 1.5px;
+                background: -webkit-linear-gradient(-10deg, #FF7A00, #FF07D7);
+                margin-top: 0.2rem;
+                border-radius: 50px;
+                transform: scaleX(1);
+                transform-origin: left;
+                transition: transform 0.5s ease-in-out;
+            }
         }
 
         &__a{
-            transform: translateY(0%);
-            transition: all .5s ease;
-            border-radius: 50px;
-            padding: 0.5rem 1rem;
-            border: 1px solid rgb(203, 203, 203);
+            padding: 0.5rem;
             cursor: pointer;
         }
 
         &__grid{
             width: 70%;
-            // min-height: 70vh;
             margin: 3rem auto;
             z-index: 5;
             display: flex;
@@ -170,26 +160,41 @@
             }
         }
 
-        &__img{
+        &__item{
             width: calc((100% / 2) - 2rem);
             margin: 1rem;
-            min-height: 50vh;
-            border-radius: 30px;
+            overflow: hidden;
+            border-radius: 20px;
             @media screen and (max-width:430px){
                 width: 100%;
                 margin: 1rem 0;
-                border-radius: 0px;
             }
         }
 
-        &__img.activado{
+        &__img{
+            min-height: 50vh;
+            transform: scale(1);
+            transition: all .5s ease;
+            @media screen and (max-width:430px){
+                min-height: 30vh;
+            }
+        }
+
+        &__item.verde.enlace:hover .main__img{
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+        &__item.activado{
             display: none;
         }
         
     
     }
 
-    
+
+
+
     .wrapper{
         width: 100%;
         text-align: center;
@@ -197,10 +202,10 @@
         flex-flow: row nowrap;
         justify-content: center;
         align-items: center;
-        color: #282828;
+        color: var(--color-texto);
         font-family: var(--font-titulos);
         font-weight: 700;
-        font-size: 5em;
+        font-size: 4.5em;
         @media screen and (max-width:1600px){
             font-size: 4em;
         }
@@ -232,8 +237,10 @@
             font-size: 2.4em;
         }
         @media screen and (max-width:430px){
-            font-size: 2em;
+            font-size: 1.7em;
             flex-flow: column wrap;
+            position: absolute;
+            top: 50%;
         }
     }
     span{

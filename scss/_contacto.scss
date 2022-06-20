@@ -1,7 +1,7 @@
 .contacto{
     .main{
         &__h2{
-            color: #282828;
+            color: var(--color-texto);
             font-family: var(--font-titulos);
             font-weight: 700;
             font-size: 5em;
@@ -14,6 +14,7 @@
             flex-flow: column nowrap;
             justify-content: center;
             align-items: center;
+            color: var(--color-texto);
         }
     
         &__p{
@@ -35,10 +36,11 @@
             justify-content: flex-start;
             align-items: center;
             margin: 0 0 2rem 7rem;
+            animation: fadeOutContacto 0.4s ease 1 both;
         }
     
         &__a:hover{
-            animation: icons 0.5s ease 1 forwards;
+            animation: fadeInContacto 0.4s ease 1 both;
         }
     
         &__svg{
